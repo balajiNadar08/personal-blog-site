@@ -4,13 +4,8 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import SidebarFullScreen from "@/components/SidebarFullScreen";
 import Header from "@/components/Header";
 import { mdxComponents } from "@/components/mdx/mdx-components";
-import { Lato, Special_Elite } from "next/font/google";
+import { Special_Elite } from "next/font/google";
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  style: ["normal", "italic"],
-});
 const specialElite = Special_Elite({
   weight: "400",
   subsets: ["latin"],
@@ -35,17 +30,19 @@ export default async function BlogPage({
   const source = fs.readFileSync(filePath, "utf8");
 
   const { content, frontmatter } = await compileMDX<Frontmatter>({
-  source,
-  options: {
-    parseFrontmatter: true,
-  },
-  components: mdxComponents,
-});
+    source,
+    options: {
+      parseFrontmatter: true,
+    },
+    components: mdxComponents,
+  });
 
   const readingTime = Math.ceil(source.split(/\s+/).length / 200);
 
   return (
-    <div className={`min-h-screen bg-[#F3E4C9] ${specialElite.className} pb-10`}>
+    <div
+      className={`min-h-screen bg-[#F3E4C9] ${specialElite.className} pb-10`}
+    >
       <Header title="Balaji's Blog" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -87,13 +84,7 @@ export default async function BlogPage({
                 />
               )}
 
-              <section
-  className="
-    max-w-none
-  "
->
-                {content}
-              </section>
+              <section className="max-w-none">{content}</section>
 
               <footer className="pt-10 border-t border-black/10">
                 <p className="text-sm text-black/50">Thanks for reading.</p>
