@@ -15,17 +15,17 @@ const routes = [
 const socialLinks = [
   {
     icon: FaGithub,
-    href: "https://github.com/balajinadar08",
+    href: "https://github.com/balajinadar08/",
     label: "GitHub",
   },
   {
     icon: FaInstagram,
-    href: "https://instagram.com/yourusername",
+    href: "https://www.instagram.com/balaji_nadar_08/",
     label: "Instagram",
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/balaji-nadar-828b41354/",
     label: "LinkedIn",
   },
   {
