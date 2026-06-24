@@ -17,7 +17,7 @@ export default function Page() {
     <div
       className={`min-h-screen bg-[#F3E4C9] pb-10 ${specialElite.className}`}
     >
-      <Header title="What Am I Watching?" />
+      <Header title="What Am I Reading?" />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-28 md:flex-row">
@@ -82,7 +82,7 @@ export default function Page() {
                 href="/recommend"
                 className="inline-flex rounded-full border-2 border-black px-8 py-4 text-lg transition hover:bg-black hover:text-[#F3E4C9]"
               >
-                Recommend a Book →
+                Recommend me a Book →
               </Link>
             </section>
           </main>
