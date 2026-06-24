@@ -1,0 +1,69 @@
+---
+title: "Sandesa: AI Newspaper"
+date: "June 23, 2026"
+tags:
+  - Project
+  - AI
+coverImage: "/blogs/sandesa/sandesa.webp"
+---
+
+## What is Sandesa?
+
+Sandesa is an AI-powered newspaper that fetches articles from various RSS feeds, extracts their contents and generates concise summaries. Instead of overwhelming content with dozens of headlines, it presents only the most important stories.
+
+The goal is simple:\
+Read less. Learn more.
+
+## Built With Friends
+
+Sandesa wasn't a solo project.
+
+First I shared a very raw idea of this project with <BlogLink href="https://github.com/Prathamesh1946">Prathamesh</BlogLink> who is my go to guy to discuss project ideas. I don't know what went into his mind but he was ready to work in this project. 
+
+Then we decided to include more people in this project. We explained the idea to both <BlogLink href="https://github.com/keene21apr-tech">Keene</BlogLink> and <BlogLink href="https://github.com/arnold-lemos">Arnold</BlogLink> who where ready to work in this project. So the work began on 1st June 2026, we set our target to complete the project in two weeks.
+
+<BlogImage
+  src="/blogs/sandesa/chart.webp"
+  alt="Sandesa Architecture"
+  caption="The chart that I had made to explain the project"
+/>
+
+I was kind of supervising and making my hands dirty on all the parts of the project. Prathamesh overtook the job of making the database with supabase and he kind of made database entirely by himself. Keene was working on AI summarizer with groq which was impressive but what I found most impressive was the background video for the landing page of the webiste, just _subarashii_. As for Arnold, he helped to make few pages and find design elements for the website. Apart from that we don't know where the fuck Arnold was rest of the time.   
+
+Fast forward to my birthday, the project was completed and we started sending links of our website to friends for reviews.
+
+
+## Tech Stack
+
+We wanted the project to remain simple and not to do overengineering.
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Supabase
+- Gemini & Groq
+
+<BlogImage
+  src="/blogs/sandesa/pages.webp"
+  alt="Sandesa Architecture"
+  caption="Category selection page, Brief & Quicky mode output"
+/>
+
+
+## The Biggest Challenge
+
+The biggest challenge was token and RPD. Even the worst model of gemini had 20 RPD for free-tier. We minimized tokens by cleaning input before we send. We even switched to Groq since it had more RPD (but less tokens).
+
+
+## Final Thoughts
+
+Am I satisfied ?\
+Hell nah. The project is no where near perfect.
+
+Did I enjoy ?\
+Absolutely.
+
+### Links
+
+<BlogLink href="https://sandesa.vercel.app/">Sandesa website</BlogLink>\
+<BlogLink href="https://github.com/balajiNadar08/AI-journalist">Sandesa github repository</BlogLink>
