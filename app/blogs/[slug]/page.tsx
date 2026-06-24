@@ -3,6 +3,7 @@ import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import SidebarFullScreen from "@/components/SidebarFullScreen";
 import Header from "@/components/Header";
+import { mdxComponents } from "@/components/mdx/mdx-components";
 import { Lato, Special_Elite } from "next/font/google";
 
 const lato = Lato({
@@ -34,11 +35,12 @@ export default async function BlogPage({
   const source = fs.readFileSync(filePath, "utf8");
 
   const { content, frontmatter } = await compileMDX<Frontmatter>({
-    source,
-    options: {
-      parseFrontmatter: true,
-    },
-  });
+  source,
+  options: {
+    parseFrontmatter: true,
+  },
+  components: mdxComponents,
+});
 
   const readingTime = Math.ceil(source.split(/\s+/).length / 200);
 
@@ -86,22 +88,10 @@ export default async function BlogPage({
               )}
 
               <section
-                className="
-                  prose
-                  prose-lg
-                  max-w-none
-                  prose-headings:text-[#1A1A1A]
-                  prose-p:text-black/80
-                  prose-p:leading-8
-                  prose-strong:text-black
-                  prose-a:text-blue-700
-                  prose-blockquote:border-l-4
-                  prose-blockquote:border-black/20
-                  prose-blockquote:text-black/70
-                  prose-code:text-red-700
-                  prose-pre:bg-[#1B1B1B]
-                "
-              >
+  className="
+    max-w-none
+  "
+>
                 {content}
               </section>
 
